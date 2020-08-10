@@ -23,12 +23,18 @@ B   f   f   f
 
 * Adjacency List (We'll use this)
 
+
+# Linked list and tree are graphs
+
 edges = {
 'A' : [B,C],
 'B' : [B,A,C], # order doesn't matter 
 'C' : []
 
 }
+
+
+
 
 
 
