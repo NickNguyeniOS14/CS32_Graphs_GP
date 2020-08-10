@@ -44,6 +44,32 @@ class Graph:
                 for next_vert in self.get_neighbors(v):
                     q.enqueue(next_vert)
 
+    def dft(self, starting_vertex_id):
+        # Create an empty stack
+        s = Stack()
+
+        # Create a set to store the visited nodes
+        visited = set()
+
+        # Init: push the starting node
+        s.push(starting_vertex_id)
+
+        # While the stack isn't empty
+        while s.size() > 0:
+            # pop the first item
+            v = s.pop()
+            # If it's not been visited:
+            if v not in visited:
+                # Mark as visited (i.e. add to the visited set)
+                visited.add(v)
+
+                # Do something with the node
+                print(f"Visited {v}")
+
+                # Add all neighbors to the stack
+
+                for next_vert in self.get_neighbors(v):
+                    s.push(next_vert)
 
 g = Graph()
 
@@ -66,5 +92,10 @@ g.bft('B')
 
 # order: B, then A, C, then D
 
+# BFT:
+Queue [A,D]
+
+# DFT:
+Stack
 
 print(g.vertices)
