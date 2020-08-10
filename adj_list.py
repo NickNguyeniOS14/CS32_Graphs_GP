@@ -1,8 +1,11 @@
 from queue import Queue
 from stack import Stack
+
+
 # lets do a graph adjacency list
 class Graph:
     """Represent a graph as a dictionary of vertices mapping labels to edges."""
+
     def __init__(self):
         pass
 
@@ -20,7 +23,7 @@ class Graph:
 
     def dft(self, starting_vertex_id):
         pass
-    
+
     def bfs(self, starting_vertex_id, target_vertex_id):
         pass
 
